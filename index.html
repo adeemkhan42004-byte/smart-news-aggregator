@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart News App</title>
+</head>
+<body>
+  <h1>Latest News</h1>
+  <div id="news"></div>
+
+  <script>
+    async function getNews() {
+      let response = await fetch("https://newsapi.org/v2/top-headlines?country=in&apiKey=YOUR_API_KEY");
+      let data = await response.json();
+
+      let newsDiv = document.getElementById("news");
+
+      data.articles.forEach(article => {
+        let p = document.createElement("p");
+        p.innerHTML = "<b>" + article.title + "</b>";
+        newsDiv.appendChild(p);
+      });
+    }
+
+    getNews();
+  </script>
+</body>
+</html>
