@@ -26,4 +26,4 @@ This is a web-based news application that fetches and displays real-time news ar
 - Dark mode UI
 
 ## Author
-Adeem Khan
+Mohd Adeem Khan
